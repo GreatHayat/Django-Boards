@@ -1,0 +1,30 @@
+{% extends 'boards/base.html' %}
+
+{% block content %}
+<ol class="breadcrumb my-4">
+    <li class="breadcrumb-item active">Boards</li>
+</ol>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Board</th>
+            <th>Post</th>
+            <th>Topic</th>
+            <th>Last Post</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for board in boards %}
+            <tr>
+                <td>
+                    {{ board.name }}
+                    <small class="text-muted d-block">{{ board.description }}</small>
+                </td>
+                <td class="align-middle">0</td>
+                <td class="align-middle">0</td>
+                <td></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
