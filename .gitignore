@@ -1,0 +1,8 @@
+
+*.log
+*.port
+*.pyc
+__pycache__/
+local_settings.py 
+.vscode/*
+/static
